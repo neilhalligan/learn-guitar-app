@@ -1,0 +1,17 @@
+.fret {
+  display: inline-block;
+  height: 100px;
+  width: 8.33%;
+  background-color: brown;
+  margin: auto;
+}
+
+.guitarStringContainer {
+  width: 80%;
+  margin: auto;
+  position: center;
+}
+
+.guitarString {
+  margin: auto;
+}
