@@ -4,8 +4,13 @@ import { shallow } from 'enzyme';
 import App from '../App';
 
 describe('App', () => {
-  it('should render', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.length).toBe(1);
+  const wrapper = shallow(<App />);
+
+  it('should render Menu', () => {
+    expect(wrapper.find('MenuList').length).toBe(1);
+  });
+
+  it('should render Guitar', () => {
+    expect(wrapper.find('Guitar').length).toBe(1);
   });
 });

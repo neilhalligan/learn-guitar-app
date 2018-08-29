@@ -1,17 +1,73 @@
 .fret {
-  display: inline-block;
-  height: 100px;
-  width: 8.33%;
-  background-color: brown;
-  margin: auto;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 6%;
+  background-color: #2E2E2E;
+  -webkit-user-select: none; /* Safari prevent text highlight*/
+  -moz-user-select: none; /* Firefox prevent text highlight */
+  -ms-user-select: none; /* IE10+/Edge prevent text highlight */
+  user-select: none; /* Standard prevent text highlight */
 }
 
-.guitarStringContainer {
-  width: 80%;
-  margin: auto;
-  position: center;
+.fret:hover {
+  background-color: white;
 }
 
 .guitarString {
-  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* margin: auto; */
+}
+
+.circle {
+	border-radius: 50%;
+}
+
+.fret-circle {
+  border-radius: 50%;
+  width: 80%;
+  display: flex;
+  height: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.light-blue {
+  background-color: #2F84EA;
+}
+
+.menu-item {
+	width: 60px;
+	height: 60px;
+  display: inline-block;
+  line-height: 3.5;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.menu-item:hover {
+  background-color: yellow;
+}
+
+.menu-list {
+  justify-content: center;
+  display: flex;
+  margin: 20px 0 80px;
 }

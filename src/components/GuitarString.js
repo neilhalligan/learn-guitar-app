@@ -1,22 +1,20 @@
 import React from 'react';
-
+import getNoteArray from 'components/getNoteArray';
 import Fret from './Fret';
 
-class GuitarString extends React.Component {
-  render() {
-    const noteArray = [
-      'E', 'F', 'F#/Gb', 'G', 'G#/Ab', 'A', 'A#/Bb', 'B', 'C', 'C#/Db', 'D', 'D#/Eb'
-    ];
-    return (
-      <div className="guitarStringContainer" >
-        <div className="guitarString">
-          {Object.values(noteArray).map(note => {
-            return <Fret key={note} note={note} />;
-          })}
-        </div>
-      </div>
-    );
-  }
-}
+const GuitarString = (props) => {
+  const fretValues = getNoteArray(props.openNote);
+  return (
+    <div className="guitarString">
+      {Object.values(fretValues).map(fretValue => {
+        return <Fret
+          key={props.stringNo + fretValue}
+          note={fretValue}
+          fretPosition={props.stringNo + fretValue}
+        />;
+      })}
+    </div>
+  );
+};
 
 export default GuitarString;

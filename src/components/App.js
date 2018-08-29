@@ -1,11 +1,13 @@
 import React from 'react';
-import GuitarString from './GuitarString';
+import Guitar from './Guitar';
+import MenuList from './MenuList';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <GuitarString stringNo={1} openNote={'E'}/>
+        <MenuList />
+        <Guitar />
       </div>
     );
   }

@@ -1,6 +1,12 @@
 const path = require('path');
 
 module.exports = {
+  resolve: {
+    modules: [
+      path.resolve('./src'),
+      path.resolve('./node_modules')
+    ]
+  },
   entry: ['babel-polyfill', './src/components/Index.js'],
   output: {
     path: path.resolve(__dirname, 'public'),
